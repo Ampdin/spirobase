@@ -14,6 +14,23 @@ To start your application in the dev profile, simply run:
 
 For further instructions on how to develop with JHipster, have a look at [Using JHipster in development][].
 
+## Building and running a Docker image of your application
+To create a Docker image of your application, and push it into your Docker registry:
+
+With Gradle, type: 
+
+    ./gradlew bootRepackage -Pprod buildDocker
+
+This will package your application with the prod profile, and install the image.
+
+On Windows, due to lack of named pipes, you may have to tune settings for Docker and turn on “Expose daemon on tcp://localhost:2375 without TLS”.
+
+To run this image, use the Docker Compose configuration located in the src/main/docker folder of your application:
+
+    docker-compose -f src/main/docker/app.yml up
+
+This command will start up your application and the services it relies on (database, search engine, JHipster Registry…).
+
 ### Using angular-cli
 
 You can also use [Angular CLI][] to generate some custom client code.
