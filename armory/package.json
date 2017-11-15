@@ -8,8 +8,6 @@
     "node_modules"
   ],
   "devDependencies": {
-    "generator-jhipster-docker": "2.2.0",
-    "generator-jhipster-pace": "0.1.3",
     "generator-jhipster": "4.10.2"
   },
   "engines": {

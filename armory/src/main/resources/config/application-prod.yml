@@ -26,15 +26,6 @@ spring:
             enabled: false
         livereload:
             enabled: false
-    cloud:
-        stream:
-            kafka:
-                binder:
-                    brokers: localhost
-                    zk-nodes: localhost
-            bindings:
-                output:
-                    destination: topic-jhipster
     datasource:
         type: com.zaxxer.hikari.HikariDataSource
         url: jdbc:mysql://localhost:3306/armory?useUnicode=true&characterEncoding=utf8&useSSL=false
@@ -122,7 +113,7 @@ jhipster:
     security:
         authentication:
             jwt:
-                secret: 60a6acacdd06331faf5e52f0b2dfd9695cbae279
+                secret: 6b6c7a19abf960dd986203719f7c2ea2f6a7754c
                 # Token is valid 24 hours
                 token-validity-in-seconds: 86400
                 token-validity-in-seconds-for-remember-me: 2592000

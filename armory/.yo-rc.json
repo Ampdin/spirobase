@@ -17,12 +17,12 @@
     "devDatabaseType": "mysql",
     "prodDatabaseType": "mysql",
     "searchEngine": "elasticsearch",
-    "messageBroker": "kafka",
+    "messageBroker": false,
     "serviceDiscoveryType": "eureka",
-    "buildTool": "gradle",
+    "buildTool": "maven",
     "enableSocialSignIn": false,
-    "enableSwaggerCodegen": true,
-    "jwtSecretKey": "60a6acacdd06331faf5e52f0b2dfd9695cbae279",
+    "enableSwaggerCodegen": false,
+    "jwtSecretKey": "6b6c7a19abf960dd986203719f7c2ea2f6a7754c",
     "enableTranslation": true,
     "applicationType": "microservice",
     "testFrameworks": [
@@ -30,16 +30,6 @@
       "cucumber"
     ],
     "jhiPrefix": "jhi",
-    "otherModules": [
-      {
-        "name": "generator-jhipster-docker",
-        "version": "2.2.0"
-      },
-      {
-        "name": "generator-jhipster-pace",
-        "version": "0.1.3"
-      }
-    ],
     "nativeLanguage": "en",
     "languages": [
       "en",
