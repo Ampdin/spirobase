@@ -27,15 +27,6 @@ spring:
         serialization.write_dates_as_timestamps: false
     cache:
         type: none
-    cloud:
-        stream:
-            kafka:
-                binder:
-                    brokers: localhost
-                    zk-nodes: localhost
-            bindings:
-                output:
-                    destination: topic-jhipster
     datasource:
         type: com.zaxxer.hikari.HikariDataSource
         url: jdbc:h2:mem:armory;DB_CLOSE_DELAY=-1
@@ -64,8 +55,8 @@ spring:
             cluster-nodes:
             properties:
                 path:
-                    logs: build/elasticsearch/log
-                    data: build/elasticsearch/data
+                    logs: target/elasticsearch/log
+                    data: target/elasticsearch/data
     mail:
         host: localhost
     messages:
@@ -112,7 +103,7 @@ jhipster:
     security:
         authentication:
             jwt:
-                secret: 60a6acacdd06331faf5e52f0b2dfd9695cbae279
+                secret: 6b6c7a19abf960dd986203719f7c2ea2f6a7754c
                 # Token is valid 24 hours
                 token-validity-in-seconds: 86400
     metrics: # DropWizard Metrics configuration, used by MetricsConfiguration

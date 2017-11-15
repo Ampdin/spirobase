@@ -9,27 +9,10 @@ This application is configured for Service Discovery and Configuration with the 
 
 To start your application in the dev profile, simply run:
 
-    ./gradlew
+    ./mvnw
 
 
 For further instructions on how to develop with JHipster, have a look at [Using JHipster in development][].
-
-## Building and running a Docker image of your application
-To create a Docker image of your application, and push it into your Docker registry:
-
-With Gradle, type: 
-
-    ./gradlew bootRepackage -Pprod buildDocker
-
-This will package your application with the prod profile, and install the image.
-
-On Windows, due to lack of named pipes, you may have to tune settings for Docker and turn on “Expose daemon on tcp://localhost:2375 without TLS”.
-
-To run this image, use the Docker Compose configuration located in the src/main/docker folder of your application:
-
-    docker-compose -f src/main/docker/app.yml up
-
-This command will start up your application and the services it relies on (database, search engine, JHipster Registry…).
 
 ### Using angular-cli
 
@@ -45,24 +28,16 @@ will generate few files:
     create src/main/webapp/app/my-component/my-component.component.ts
     update src/main/webapp/app/app.module.ts
 
-### Doing API-First development using swagger-codegen
-
-[Swagger-Codegen]() is configured for this application. You can generate API code from the `src/main/resources/swagger/api.yml` definition file by running:
-Then implements the generated interfaces with `@RestController` classes.
-
-To edit the `api.yml` definition file, you can use a tool such as [Swagger-Editor](). Start a local instance of the swagger-editor using docker by running: `docker-compose -f src/main/docker/swagger-editor.yml up -d`. The editor will then be reachable at [http://localhost:7742](http://localhost:7742).
-
-Refer to [Doing API-First development][] for more details.
 
 ## Building for production
 
 To optimize the armory application for production, run:
 
-    ./gradlew -Pprod clean bootRepackage
+    ./mvnw -Pprod clean package
 
 To ensure everything worked, run:
 
-    java -jar build/libs/*.war
+    java -jar target/*.war
 
 
 Refer to [Using JHipster in production][] for more details.
@@ -71,12 +46,12 @@ Refer to [Using JHipster in production][] for more details.
 
 To launch your application's tests, run:
 
-    ./gradlew test
+    ./mvnw clean test
 ### Other tests
 
 Performance tests are run by [Gatling][] and written in Scala. They're located in [src/test/gatling](src/test/gatling) and can be run with:
 
-    ./gradlew gatlingRun
+    ./mvnw gatling:execute
 
 For more information, refer to the [Running tests page][].
 
@@ -94,7 +69,7 @@ To stop it and remove the container, run:
 You can also fully dockerize your application and all the services that it depends on.
 To achieve this, first build a docker image of your app by running:
 
-    ./gradlew bootRepackage -Pprod buildDocker
+    ./mvnw package -Pprod dockerfile:build
 
 Then run:
 
@@ -117,6 +92,3 @@ To configure CI for your project, run the ci-cd sub-generator (`jhipster ci-cd`)
 [Setting up Continuous Integration]: http://www.jhipster.tech/documentation-archive/v4.10.2/setting-up-ci/
 
 [Gatling]: http://gatling.io/
-[Swagger-Codegen]: https://github.com/swagger-api/swagger-codegen
-[Swagger-Editor]: http://editor.swagger.io
-[Doing API-First development]: http://www.jhipster.tech/documentation-archive/v4.10.2/doing-api-first-development/

@@ -1,7 +1,7 @@
 ######################
 # Project Specific
 ######################
-/build/www/**
+/target/www/**
 /src/test/javascript/coverage/
 
 ######################
@@ -139,3 +139,4 @@ Desktop.ini
 # ESLint
 ######################
 .eslintcache
+/src/main/resources/config/

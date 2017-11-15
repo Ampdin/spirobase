@@ -5,25 +5,6 @@
     xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.5.xsd">
 
     <include file="config/liquibase/changelog/00000000000000_initial_schema.xml" relativeToChangelogFile="false"/>
-    <include file="config/liquibase/changelog/20171110235409_added_entity_Region.xml" relativeToChangelogFile="false"/>
-    <include file="config/liquibase/changelog/20171110235410_added_entity_Country.xml" relativeToChangelogFile="false"/>
-    <include file="config/liquibase/changelog/20171110235411_added_entity_Location.xml" relativeToChangelogFile="false"/>
-    <include file="config/liquibase/changelog/20171110235412_added_entity_Department.xml" relativeToChangelogFile="false"/>
-    <include file="config/liquibase/changelog/20171110235413_added_entity_Task.xml" relativeToChangelogFile="false"/>
-    <include file="config/liquibase/changelog/20171110235414_added_entity_Employee.xml" relativeToChangelogFile="false"/>
-    <include file="config/liquibase/changelog/20171110235415_added_entity_Job.xml" relativeToChangelogFile="false"/>
-    <include file="config/liquibase/changelog/20171110235416_added_entity_JobHistory.xml" relativeToChangelogFile="false"/>
-    <include file="config/liquibase/changelog/20171110235417_added_entity_ShoppingCart.xml" relativeToChangelogFile="false"/>
-    <include file="config/liquibase/changelog/20171110235418_added_entity_CartItem.xml" relativeToChangelogFile="false"/>
-    <include file="config/liquibase/changelog/20171110235419_added_entity_Book.xml" relativeToChangelogFile="false"/>
     <!-- jhipster-needle-liquibase-add-changelog - JHipster will add liquibase changelogs here -->
-    <include file="config/liquibase/changelog/20171110235410_added_entity_constraints_Country.xml" relativeToChangelogFile="false"/>
-    <include file="config/liquibase/changelog/20171110235411_added_entity_constraints_Location.xml" relativeToChangelogFile="false"/>
-    <include file="config/liquibase/changelog/20171110235412_added_entity_constraints_Department.xml" relativeToChangelogFile="false"/>
-    <include file="config/liquibase/changelog/20171110235414_added_entity_constraints_Employee.xml" relativeToChangelogFile="false"/>
-    <include file="config/liquibase/changelog/20171110235415_added_entity_constraints_Job.xml" relativeToChangelogFile="false"/>
-    <include file="config/liquibase/changelog/20171110235416_added_entity_constraints_JobHistory.xml" relativeToChangelogFile="false"/>
-    <include file="config/liquibase/changelog/20171110235417_added_entity_constraints_ShoppingCart.xml" relativeToChangelogFile="false"/>
-    <include file="config/liquibase/changelog/20171110235418_added_entity_constraints_CartItem.xml" relativeToChangelogFile="false"/>
     <!-- jhipster-needle-liquibase-add-constraints-changelog - JHipster will add liquibase constraints changelogs here -->
 </databaseChangeLog>
