@@ -9,10 +9,7 @@
     </facet>
   </component>
   <component name="NewModuleRootManager" inherit-compiler-output="true">
-    <exclude-output />
-    <content url="file://$MODULE_DIR$">
-      <excludeFolder url="file://$MODULE_DIR$/registry/dist" />
-      <excludeFolder url="file://$MODULE_DIR$/registry/tmp" />
+
       <excludeFolder url="file://$MODULE_DIR$/spirovanni/dist" />
       <excludeFolder url="file://$MODULE_DIR$/spirovanni/tmp" />
     </content>
